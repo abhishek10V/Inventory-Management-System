@@ -1,0 +1,25 @@
+<div>
+    <p><strong>Shelf ID :</strong> {{shelfDetails.shelfId}}</p>
+    <p><strong>Shelf Name :</strong> {{shelfDetails.shelfName}}</p>
+    <p><strong>Shelf Type :</strong> {{shelfDetails.shelfType}}</p>
+
+    <div *ngIf="shelfDetails.shelfPositionId !== null && shelfDetails.shelfPositionId !== undefined; else noShelfPosition">
+    <p><strong>Shelf Position ID :</strong> {{shelfDetails.shelfPositionId}}</p>
+    <p><strong>Shelf Position Name :</strong> {{shelfDetails.shelfPositionName}}</p>
+
+    <div *ngIf="shelfDetails.deviceId !== null && shelfDetails.deviceId !== undefined; else noDevice">
+        <p><strong>Device ID  :</strong> {{shelfDetails.deviceId}}</p>
+        <p><strong>Device Name :</strong> {{shelfDetails.deviceName}}</p>
+        <p><strong>Device Type :</strong> {{shelfDetails.deviceType}}</p>
+    </div>
+    
+    <ng-template #noDevice>
+        <p><strong>No Device associated with particular Shelf Posiiton.</strong></p>
+    </ng-template>
+    </div>
+
+    <ng-template #noShelfPosition>
+        <p><strong>No Shelf Position associated with particular Shelf.</strong></p>
+    </ng-template>
+
+</div>
