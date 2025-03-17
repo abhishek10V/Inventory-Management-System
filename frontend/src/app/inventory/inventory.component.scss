@@ -1,0 +1,72 @@
+.inventory-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.inventory-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.inventory-form {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+}
+
+.inventory-form input {
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+
+.inventory-form button {
+    margin-right: 10px;
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.api-button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  text-decoration: none;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.full-width {
+    width: 100%;
+    max-width: none;
+  }
+  
+  .accordion-button {
+    font-size: 18px;
+  }
+  
+  .accordion-body {
+    padding: 20px;
+  }
+  
+  .inventory-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px; /* Adjust based on design */
+  }
+  

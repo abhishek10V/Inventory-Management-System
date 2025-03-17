@@ -1,0 +1,214 @@
+<div class="inventory-container">
+    <div class="accordion full-width" id="accordionInventory">
+  
+      <!-- Save Shelf -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSaveShelf" aria-expanded="true" aria-controls="collapseSaveShelf">
+            Save Shelf
+          </button>
+        </h2>
+        <div id="collapseSaveShelf" class="accordion-collapse collapse" data-bs-parent="#accordionInventory">
+          <div class="inventory-form accordion-body">
+            <form>
+              <input type="text" placeholder="ID" [(ngModel)]="shelfv0.id" name="id" required><br>
+              <input type="text" placeholder="Shelf Name" [(ngModel)]="shelfv0.name" name="name" required><br>
+              <input type="text" placeholder="Shelf Type" [(ngModel)]="shelfv0.shelfType" name="shelfType" required><br>
+              <button type="submit" (click)="onSubmitSaveShelf()">Submit</button>
+              <button type="button" (click)="hideform()">Cancel</button>
+            </form>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Save Shelf Position -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSaveShelfPosition" aria-expanded="false" aria-controls="collapseSaveShelfPosition">
+            Save Shelf Position
+          </button>
+        </h2>
+        <div id="collapseSaveShelfPosition" class="accordion-collapse collapse" data-bs-parent="#accordionInventory">
+          <div class="inventory-form accordion-body">
+            <form>
+              <input type="text" placeholder="ID" [(ngModel)]="shelfPositionv0.id" name="id" required><br>
+              <input type="text" placeholder="Shelf Position Name" [(ngModel)]="shelfPositionv0.name" name="name" required><br>
+              <button type="submit" (click)="onSubmitSaveShelfPosition()">Submit</button>
+              <button type="button" (click)="hideform()">Cancel</button>
+            </form>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Get Shelf -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGetShelf" aria-expanded="false" aria-controls="collapseGetShelf">
+            Get Shelf
+          </button>
+        </h2>
+        <div id="collapseGetShelf" class="accordion-collapse collapse" data-bs-parent="#accordionInventory">
+          <div class="inventory-form accordion-body">
+            <form>
+              <input type="text" placeholder="ID" [(ngModel)]="shelfv0Id" name="id" required><br>
+              <button type="submit" (click)="onSubmitGetShelf()">Submit</button>
+              <button type="button" (click)="hideform()">Cancel</button>
+            </form>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Get Shelf Position -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGetShelfPosition" aria-expanded="false" aria-controls="collapseGetShelfPosition">
+            Get Shelf Position
+          </button>
+        </h2>
+        <div id="collapseGetShelfPosition" class="accordion-collapse collapse" data-bs-parent="#accordionInventory">
+          <div class="inventory-form accordion-body">
+            <form>
+              <input type="text" placeholder="ID" [(ngModel)]="shelfPositionv0Id" name="id" required><br>
+              <button type="submit" (click)="onSubmitGetShelfPosition()">Submit</button>
+              <button type="button" (click)="hideform()">Cancel</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Delete Shelf -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDeleteShelf" aria-expanded="false" aria-controls="#collapseDeleteShelf">
+            Delete Shelf
+          </button>
+        </h2>
+        <div id="collapseDeleteShelf" class="accordion-collapse collapse" data-bs-parent="#accordionInventory">
+          <div class="inventory-form accordion-body">
+            <form>
+              <input type="text" placeholder="ID" [(ngModel)]="shelfv0Id" name="id" required><br>
+              <button type="submit" (click)="onSubmitDeleteShelf()">Submit</button>
+              <button type="button" (click)="hideform()">Cancel</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Delete Shelf Position -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDeleteShelfPosition" aria-expanded="false" aria-controls="#collapseDeleteShelfPosition">
+            Delete Shelf Position
+          </button>
+        </h2>
+        <div id="collapseDeleteShelfPosition" class="accordion-collapse collapse" data-bs-parent="#accordionInventory">
+          <div class="inventory-form accordion-body">
+            <form>
+              <input type="text" placeholder="ID" [(ngModel)]="shelfPositionv0Id" name="id" required><br>
+              <button type="submit" (click)="onSubmitDeleteShelfPosition()">Submit</button>
+              <button type="button" (click)="hideform()">Cancel</button>
+            </form>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Add Shelf Position to Device -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAddShelfPositionToDevice" aria-expanded="false" aria-controls="collapseAddShelfPositionToDevice">
+            Add Shelf Position to Device
+          </button>
+        </h2>
+        <div id="collapseAddShelfPositionToDevice" class="accordion-collapse collapse" data-bs-parent="#accordionInventory">
+          <div class="inventory-form accordion-body">
+            <form>
+              <input type="text" placeholder="Shelf Position ID" [(ngModel)]="shelfPositionv0Id" name="shelfPositionId" required><br>
+              <input type="text" placeholder="Device ID" [(ngModel)]="deviceId" name="deviceId" required><br>
+              <button type="submit" (click)="onSubmitAddShelfPositonToDevice()">Submit</button>
+              <button type="button" (click)="hideform()">Cancel</button>
+            </form>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Add Shelf to Shelf Position -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAddShelfToShelfPosition" aria-expanded="false" aria-controls="collapseAddShelfToShelfPosition">
+            Add Shelf to Shelf Position
+          </button>
+        </h2>
+        <div id="collapseAddShelfToShelfPosition" class="accordion-collapse collapse" data-bs-parent="#accordionInventory">
+          <div class="inventory-form accordion-body">
+            <form>
+              <input type="text" placeholder="Shelf ID" [(ngModel)]="shelfv0Id" name="shelfId" required><br>
+              <input type="text" placeholder="Shelf Position ID" [(ngModel)]="shelfPositionv0Id" name="shelfPositionId" required><br>
+              <button type="submit" (click)="onSubmitAddShelfToShelfPositon()">Submit</button>
+              <button type="button" (click)="hideform()">Cancel</button>
+            </form>
+          </div>
+        </div>
+      </div>
+     
+      <!-- Display All Shelves -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseShelves" aria-expanded="false" aria-controls="collapseShelves">
+            View All Shelves
+          </button>
+        </h2>
+        <div id="collapseShelves" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <button (click)="fetchAllShelves()">Refresh Shelves List</button>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Shelf ID</th>
+                  <th>Shelf Name</th>
+                  <th>Shelf Type</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let s of shelves">
+                  <td>{{ s.id }}</td>
+                  <td>{{ s.name }}</td>
+                  <td>{{ s.shelfType }}</td>
+                  <td><a [routerLink]="['/details', s.id]" class="btn-primary">Summary</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Display All Shelf Positions -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseShelfPositions" aria-expanded="false" aria-controls="collapseShelfPositions">
+            View All Shelf Position
+          </button>
+        </h2>
+        <div id="collapseShelfPositions" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <button (click)="fetchAllShelfPositions()">Refresh Shelf Position List</button>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Shelf Position ID</th>
+                  <th>Shelf Position Name</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let s of shelfPositions">
+                  <td>{{ s.id }}</td>
+                  <td>{{ s.name }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+  

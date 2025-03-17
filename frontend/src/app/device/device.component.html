@@ -1,0 +1,111 @@
+<div class="device-container">
+  <div class="accordion full-width" id="accordionExample">
+
+    <!-- Save Device -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSave" aria-expanded="true" aria-controls="collapseSave">
+          Save Device
+        </button>
+      </h2>
+      <div id="collapseSave" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="device-form accordion-body">
+          <form (submit)="onSubmitSave(); $event.preventDefault()">
+            <input type="text" placeholder="ID" [(ngModel)]="newDevice.id" name="id" required><br>
+            <input type="text" placeholder="Name" [(ngModel)]="newDevice.name" name="name" required><br>
+            <input type="text" placeholder="Device Type" [(ngModel)]="newDevice.deviceType" name="deviceType" required><br>
+            <button type="submit">Submit</button>
+            <button type="button" (click)="hideForm()">Cancel</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Delete Device -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDelete" aria-expanded="false" aria-controls="collapseDelete">
+          Delete Device
+        </button>
+      </h2>
+      <div id="collapseDelete" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="device-form accordion-body">
+          <form (submit)="onSubmitDelete(); $event.preventDefault()">
+            <input type="number" placeholder="Device ID" [(ngModel)]="deviceId" name="deviceId" required><br>
+            <button type="submit">Submit</button>
+            <button type="button" (click)="hideForm()">Cancel</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Get Device By ID -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGet" aria-expanded="false" aria-controls="collapseGet">
+          Get Device By ID
+        </button>
+      </h2>
+      <div id="collapseGet" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="device-form accordion-body">
+          <form (submit)="onSubmitGet(); $event.preventDefault()">
+            <input type="number" placeholder="Device ID" [(ngModel)]="deviceId" name="deviceId" required><br>
+            <button type="submit">Submit</button>
+            <button type="button" (click)="hideForm()">Cancel</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Update Device -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUpdate" aria-expanded="false" aria-controls="collapseUpdate">
+          Update Device
+        </button>
+      </h2>
+      <div id="collapseUpdate" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="device-form accordion-body">
+          <form (submit)="onSubmitModify(); $event.preventDefault()">
+            <input type="number" placeholder="Device ID" [(ngModel)]="deviceId" name="deviceId" required><br>
+            <input type="text" placeholder="New Name" [(ngModel)]="newDevice.name" name="name" required><br>
+            <input type="text" placeholder="New Device Type" [(ngModel)]="newDevice.deviceType" name="deviceType" required><br>
+            <button type="submit">Submit</button>
+            <button type="button" (click)="hideForm()">Cancel</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Display All Devices -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDevices" aria-expanded="false" aria-controls="collapseDevices">
+          View All Devices
+        </button>
+      </h2>
+      <div id="collapseDevices" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <button (click)="fetchAllDevices()">Refresh Device List</button>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Device ID</th>
+                <th>Device Name</th>
+                <th>Device Type</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let d of devices">
+                <td>{{ d.id }}</td>
+                <td>{{ d.name }}</td>
+                <td>{{ d.deviceType }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

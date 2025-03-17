@@ -1,0 +1,57 @@
+<div class="shelf-details-container">
+    <table>
+      <tr>
+        <td><strong>Shelf ID:</strong></td>
+        <td>{{ shelfDetails.shelfId }}</td>
+      </tr>
+      <tr>
+        <td><strong>Shelf Name:</strong></td>
+        <td>{{ shelfDetails.shelfName }}</td>
+      </tr>
+      <tr>
+        <td><strong>Shelf Type:</strong></td>
+        <td>{{ shelfDetails.shelfType }}</td>
+      </tr>
+  
+      <!-- Shelf Position Details -->
+      <ng-container *ngIf="shelfDetails.shelfPositionId !== null && shelfDetails.shelfPositionId !== undefined; else noShelfPosition">
+        <tr>
+          <td><strong>Shelf Position ID:</strong></td>
+          <td>{{ shelfDetails.shelfPositionId }}</td>
+        </tr>
+        <tr>
+          <td><strong>Shelf Position Name:</strong></td>
+          <td>{{ shelfDetails.shelfPositionName }}</td>
+        </tr>
+  
+        <!-- Device Details -->
+        <ng-container *ngIf="shelfDetails.deviceId !== null && shelfDetails.deviceId !== undefined; else noDevice">
+          <tr>
+            <td><strong>Device ID:</strong></td>
+            <td>{{ shelfDetails.deviceId }}</td>
+          </tr>
+          <tr>
+            <td><strong>Device Name:</strong></td>
+            <td>{{ shelfDetails.deviceName }}</td>
+          </tr>
+          <tr>
+            <td><strong>Device Type:</strong></td>
+            <td>{{ shelfDetails.deviceType }}</td>
+          </tr>
+        </ng-container>
+  
+        <ng-template #noDevice>
+          <tr>
+            <td colspan="2" class="no-data">No Device associated with this Shelf Position.</td>
+          </tr>
+        </ng-template>
+      </ng-container>
+  
+      <ng-template #noShelfPosition>
+        <tr>
+          <td colspan="2" class="no-data">No Shelf Position associated with this Shelf.</td>
+        </tr>
+      </ng-template>
+    </table>
+  </div>
+  
