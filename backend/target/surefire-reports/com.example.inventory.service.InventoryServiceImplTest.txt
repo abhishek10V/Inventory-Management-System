@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: com.example.inventory.service.InventoryServiceImplTest
+-------------------------------------------------------------------------------
+Tests run: 12, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.569 s <<< FAILURE! -- in com.example.inventory.service.InventoryServiceImplTest
+com.example.inventory.service.InventoryServiceImplTest.testAddShelfToShelfPosition_Success -- Time elapsed: 0.014 s <<< ERROR!
+java.lang.IllegalStateException: ShelfPosition with ID 1 is already assigned to another Shelf
+	at com.example.inventory.service.InventoryServiceImpl.addShelfToShelfPosition(InventoryServiceImpl.java:123)
+	at com.example.inventory.service.InventoryServiceImplTest.testAddShelfToShelfPosition_Success(InventoryServiceImplTests.java:174)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
